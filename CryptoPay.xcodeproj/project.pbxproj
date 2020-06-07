@@ -1,0 +1,364 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B94639F1248C84DA0077F1D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94639F0248C84DA0077F1D4 /* AppDelegate.swift */; };
+		B94639F3248C84DA0077F1D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94639F2248C84DA0077F1D4 /* SceneDelegate.swift */; };
+		B94639F6248C84DA0077F1D4 /* CryptoPay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B94639F4248C84DA0077F1D4 /* CryptoPay.xcdatamodeld */; };
+		B94639F8248C84DA0077F1D4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94639F7248C84DA0077F1D4 /* ContentView.swift */; };
+		B94639FA248C84DC0077F1D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94639F9248C84DC0077F1D4 /* Assets.xcassets */; };
+		B94639FD248C84DC0077F1D4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94639FC248C84DC0077F1D4 /* Preview Assets.xcassets */; };
+		B9463A00248C84DC0077F1D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B94639FE248C84DC0077F1D4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B94639ED248C84DA0077F1D4 /* CryptoPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B94639F0248C84DA0077F1D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B94639F2248C84DA0077F1D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B94639F5248C84DA0077F1D4 /* CryptoPay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoPay.xcdatamodel; sourceTree = "<group>"; };
+		B94639F7248C84DA0077F1D4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B94639F9248C84DC0077F1D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B94639FC248C84DC0077F1D4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B94639FF248C84DC0077F1D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9463A01248C84DC0077F1D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B94639EA248C84DA0077F1D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B94639E4248C84DA0077F1D4 = {
+			isa = PBXGroup;
+			children = (
+				B94639EF248C84DA0077F1D4 /* CryptoPay */,
+				B94639EE248C84DA0077F1D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B94639EE248C84DA0077F1D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B94639ED248C84DA0077F1D4 /* CryptoPay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B94639EF248C84DA0077F1D4 /* CryptoPay */ = {
+			isa = PBXGroup;
+			children = (
+				B94639F0248C84DA0077F1D4 /* AppDelegate.swift */,
+				B94639F2248C84DA0077F1D4 /* SceneDelegate.swift */,
+				B94639F7248C84DA0077F1D4 /* ContentView.swift */,
+				B94639F9248C84DC0077F1D4 /* Assets.xcassets */,
+				B94639FE248C84DC0077F1D4 /* LaunchScreen.storyboard */,
+				B9463A01248C84DC0077F1D4 /* Info.plist */,
+				B94639F4248C84DA0077F1D4 /* CryptoPay.xcdatamodeld */,
+				B94639FB248C84DC0077F1D4 /* Preview Content */,
+			);
+			path = CryptoPay;
+			sourceTree = "<group>";
+		};
+		B94639FB248C84DC0077F1D4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B94639FC248C84DC0077F1D4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B94639EC248C84DA0077F1D4 /* CryptoPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9463A04248C84DC0077F1D4 /* Build configuration list for PBXNativeTarget "CryptoPay" */;
+			buildPhases = (
+				B94639E9248C84DA0077F1D4 /* Sources */,
+				B94639EA248C84DA0077F1D4 /* Frameworks */,
+				B94639EB248C84DA0077F1D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoPay;
+			productName = CryptoPay;
+			productReference = B94639ED248C84DA0077F1D4 /* CryptoPay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B94639E5248C84DA0077F1D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "James Burch";
+				TargetAttributes = {
+					B94639EC248C84DA0077F1D4 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = B94639E8248C84DA0077F1D4 /* Build configuration list for PBXProject "CryptoPay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B94639E4248C84DA0077F1D4;
+			productRefGroup = B94639EE248C84DA0077F1D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B94639EC248C84DA0077F1D4 /* CryptoPay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B94639EB248C84DA0077F1D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9463A00248C84DC0077F1D4 /* LaunchScreen.storyboard in Resources */,
+				B94639FD248C84DC0077F1D4 /* Preview Assets.xcassets in Resources */,
+				B94639FA248C84DC0077F1D4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B94639E9248C84DA0077F1D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B94639F6248C84DA0077F1D4 /* CryptoPay.xcdatamodeld in Sources */,
+				B94639F1248C84DA0077F1D4 /* AppDelegate.swift in Sources */,
+				B94639F8248C84DA0077F1D4 /* ContentView.swift in Sources */,
+				B94639F3248C84DA0077F1D4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B94639FE248C84DC0077F1D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B94639FF248C84DC0077F1D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9463A02248C84DC0077F1D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B9463A03248C84DC0077F1D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9463A05248C84DC0077F1D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoPay/Preview Content\"";
+				DEVELOPMENT_TEAM = P94P5PY4QL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CryptoPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JamesBurch.CryptoPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9463A06248C84DC0077F1D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CryptoPay/Preview Content\"";
+				DEVELOPMENT_TEAM = P94P5PY4QL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CryptoPay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JamesBurch.CryptoPay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B94639E8248C84DA0077F1D4 /* Build configuration list for PBXProject "CryptoPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9463A02248C84DC0077F1D4 /* Debug */,
+				B9463A03248C84DC0077F1D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9463A04248C84DC0077F1D4 /* Build configuration list for PBXNativeTarget "CryptoPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9463A05248C84DC0077F1D4 /* Debug */,
+				B9463A06248C84DC0077F1D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B94639F4248C84DA0077F1D4 /* CryptoPay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B94639F5248C84DA0077F1D4 /* CryptoPay.xcdatamodel */,
+			);
+			currentVersion = B94639F5248C84DA0077F1D4 /* CryptoPay.xcdatamodel */;
+			path = CryptoPay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B94639E5248C84DA0077F1D4 /* Project object */;
+}
