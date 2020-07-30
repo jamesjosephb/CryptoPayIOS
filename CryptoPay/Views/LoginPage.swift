@@ -16,27 +16,23 @@ struct LoginPage: View {
     @State private var InvalidLoginMessage = ""
     @State private var UserName: String = "dswashes"
     @State private var PassWord: String = "dswashes"
-    @State private var saveLoginInfo = false
-    
+    @State private var saveLoginInfo = true
+
     func Login() {
         if UserName.count < 5 {
             InvalidLoginMessage = "Invalid Username character length"
             showingInvalidLogin = true
-            
-        }
-        else if UserName != PassWord {
+
+        } else if UserName != PassWord {
             InvalidLoginMessage = "Invalid Username and Password Combination"
             showingInvalidLogin = true
-        }
-        else {
-            
+        } else {
+
             userData.getLogin(UserName.replacingOccurrences(of: " ", with: "%20"))
             viewRouter.currentPage = "page2"
         }
     }
-    
-    
-    
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -60,7 +56,7 @@ struct LoginPage: View {
                     .background(Color("lightGreyColor"))
                     .cornerRadius(5.0)
                     .padding(.bottom, 20)
-                
+
                 Toggle(isOn: $saveLoginInfo) {
                     Text("Save Login Credentials")
                 }
@@ -72,15 +68,12 @@ struct LoginPage: View {
                     .background(Color("MintLeaf"))
                     .cornerRadius(15.0)
                 }
-                
+
             }
             .padding()
         }.alert(isPresented: $showingInvalidLogin) { Alert(title: Text("Login Failed"), message: Text(self.InvalidLoginMessage), dismissButton: .default(Text("Okay")))}
     }
 }
-
-
-
 
 struct LoginPage_Previews: PreviewProvider {
     static var previews: some View {
@@ -93,5 +86,3 @@ struct LoginImage: View {
         Image("CryptoPayLogo")
     }
 }
-
-

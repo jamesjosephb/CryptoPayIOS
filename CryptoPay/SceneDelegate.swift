@@ -11,10 +11,7 @@ import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-
     var window: UIWindow?
-        /*  This ws built during the project creation. I am changing this to the function below this comment. I got the guide from the url below. The new function will allow me to change between views.  https://www.blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-bindableobject
-        */
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
@@ -57,6 +54,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-
 }
-

@@ -11,8 +11,7 @@ import SwiftUI
 struct SiteSelection: View {
     @EnvironmentObject var userData: UserData
     @Binding var ShowSites: Bool
-    
-    
+
     var body: some View {
         VStack {
             Button(action: {self.ShowSites.toggle()}) {
@@ -31,24 +30,28 @@ struct SiteSelection: View {
                 VisualEffectView(effect: UIBlurEffect(style: .dark))
                 .edgesIgnoringSafeArea(.all)
                 ShowSitesMenu(ShowSites: $ShowSites)
-                
+
                 }
         }
-        
+
     }
 }
 
-
-
-
-struct ShowSitesMenu: View{
+struct ShowSitesMenu: View {
     @EnvironmentObject var userData: UserData
     @Binding var ShowSites: Bool
-    
-    
-    func ButtonResponce(_ siteID: String, _ siteName: String, _ siteAddress: String,
-                        _ city: String, _ sitedownstat:String, _ sitepurchemail: String, _ sitepurchstat:String,
-                        _ state:String, _ zip:String, _ timezone: String, _ swipers: [Swiper]) {
+
+    func ButtonResponce(_ siteID: String,
+                        _ siteName: String,
+                        _ siteAddress: String,
+                        _ city: String,
+                        _ sitedownstat: String,
+                        _ sitepurchemail: String,
+                        _ sitepurchstat: String,
+                        _ state: String,
+                        _ zip: String,
+                        _ timezone: String,
+                        _ swipers: [Swiper]) {
         userData.SelectedSiteID = siteID
         userData.Selectedsitename = siteName
         userData.Selectedaddress = siteAddress
@@ -60,7 +63,7 @@ struct ShowSitesMenu: View{
         userData.Selectedtimezone = timezone
         userData.Selectedzip = zip
         userData.SelectedSwipers = swipers
-        
+
         userData.getSiteInfo()
         userData.getCoordinatorStatus()
         //userData.getSwiperConfigs()
@@ -69,10 +72,9 @@ struct ShowSitesMenu: View{
         }
         //userData.getSwiperConfigs()
         self.ShowSites.toggle()
-        
+
     }
-    
-    
+
     var body: some View {
         GeometryReader { geometry in
             VStack {
@@ -114,4 +116,3 @@ struct ShowSitesMenu: View{
         }
     }
 }
-

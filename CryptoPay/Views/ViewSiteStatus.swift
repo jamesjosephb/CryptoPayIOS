@@ -10,21 +10,21 @@ import SwiftUI
 
 struct ViewSiteStatus: View {
     @EnvironmentObject var userData: UserData
-    
+
     var body: some View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
             ScrollView {
 
                 VStack {
-                    HStack{
+                    HStack {
 
                         Text("Site Information")
                             .bold()
                         Spacer()
                     }.padding(.bottom)
                     .padding(.leading)
-                    
+
                     Text(userData.Selectedaddress)
                     HStack {
                         Text(userData.Selectedcity)
@@ -38,24 +38,20 @@ struct ViewSiteStatus: View {
                 .background(Color("lightGreyColor"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 10)
-                
-                
-                
-                
+
                 //Status
                 VStack {
-                    HStack{
+                    HStack {
 
                         Text("Site Status")
                             .bold()
                         Spacer()
                     }.padding(.bottom)
                     .padding(.leading)
-                    
-                    
+
                     //Purchase Made
                     if userData.Selectedsitepurchstat == "Yes" {
-                        HStack{
+                        HStack {
                             Text("Purchase Received:")
                             Spacer()
                             Text(userData.Selectedsitepurchstat)
@@ -63,10 +59,9 @@ struct ViewSiteStatus: View {
                         .padding()
                         .background(Color("LightMintLeaf"))
                         .cornerRadius(12.0)
-                        
-                    }
-                    else {
-                        HStack{
+
+                    } else {
+                        HStack {
                             Text("Purchase Received:")
                             Spacer()
                             Text(userData.Selectedsitepurchstat)
@@ -77,11 +72,9 @@ struct ViewSiteStatus: View {
                     }
 
                     Spacer()
-                    
-                    
 
                     if userData.Selectedsitepurchemail == "Yes" {
-                        HStack{
+                        HStack {
                             Text("Alarm Contacts:")
                             Spacer()
                             Text(userData.Selectedsitepurchemail)
@@ -89,9 +82,8 @@ struct ViewSiteStatus: View {
                         .padding()
                         .background(Color("LightMintLeaf"))
                         .cornerRadius(12.0)
-                    }
-                    else {
-                        HStack{
+                    } else {
+                        HStack {
                             Text("Alarm Contacts:")
                             Spacer()
                             Text(userData.Selectedsitepurchemail)
@@ -101,19 +93,17 @@ struct ViewSiteStatus: View {
                         .cornerRadius(12.0)
                     }
                     Spacer()
-                    
 
                     if userData.Selectedsitedownstat == "Connected" {
-                        HStack{
+                        HStack {
                             Text("Coordinator Status:")
                             Spacer()
                             Text(userData.Selectedsitedownstat)
                         }.padding()
                         .background(Color("LightMintLeaf"))
                         .cornerRadius(12.0)
-                    }
-                    else {
-                        HStack{
+                    } else {
+                        HStack {
                             Text("Coordinator Status")
                             Spacer()
                             Text(userData.Selectedsitedownstat)
@@ -121,25 +111,20 @@ struct ViewSiteStatus: View {
                         .background(Color.red)
                         .cornerRadius(12.0)
                     }
-                    
-                    
-                    
 
-                    HStack{
+                    HStack {
                         Text("Credit Card Reader Status")
                             .bold()
                         Spacer()
                     }
                     .padding()
-                    
-                    
-                    
+
                     ForEach(userData.SelectedSwipers) {swiper in
-                        
+
                         if self.userData.isConnected(swiper.lastcontact) {
-                            VStack{
-                                
-                                HStack{
+                            VStack {
+
+                                HStack {
                                     VStack(alignment: .leading) {
                                     Text(swiper.name)
 
@@ -149,16 +134,15 @@ struct ViewSiteStatus: View {
                                     Spacer()
                                     Text("Connected")
                                 }
-                                
+
                             }
                             .padding(.vertical, 5)
                             .padding(.horizontal)
                             .background(Color("LightMintLeaf"))
                             .cornerRadius(12.0)
-                        }
-                        else {
-                            VStack{
-                                HStack{
+                        } else {
+                            VStack {
+                                HStack {
                                     VStack(alignment: .leading) {
                                         Text(swiper.name)
 

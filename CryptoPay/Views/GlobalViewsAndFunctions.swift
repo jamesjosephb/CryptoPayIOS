@@ -8,8 +8,7 @@
 
 import SwiftUI
 
-
-struct LabelTextField : View {
+struct LabelTextField: View {
     var label: String
     var placeHolder: String
     @Binding var userInput: String
@@ -24,13 +23,13 @@ struct LabelTextField : View {
     }
 }
 
-struct LabelNumField : View {
+struct LabelNumField: View {
     var label: String
     @Binding var placeHolder: Int
     @Binding var userInput: Int
     @State var placeHolderString = ""
     @State var userInputString = ""
-    
+
     func IntToString() {
         placeHolderString = String(self.placeHolder)
         userInputString = String(self.userInput)
@@ -38,8 +37,7 @@ struct LabelNumField : View {
     func StringtoInt() {
         userInput = Int(userInputString)!
     }
-    
-    
+
     var body: some View {
         LabelTextField(label: label, placeHolder: placeHolderString, userInput: $userInputString)
         .onAppear(perform: IntToString)
@@ -47,7 +45,6 @@ struct LabelNumField : View {
         .keyboardType(.numberPad)
     }
 }
-
 
 struct DropDownPicker: View {
     var label: String
@@ -68,7 +65,7 @@ struct DropDownPicker: View {
                     }
                 }
                 if menuToggle {
-                    ForEach (dropDownOptions, id: \.self) {option in
+                    ForEach(dropDownOptions, id: \.self) {option in
                         Button(action: {
                             self.activeOption = option
                             self.menuToggle.toggle()
@@ -103,23 +100,17 @@ struct DismissingKeyboard: ViewModifier {
     }
 }
 
-
 struct DateSelector: View {
     @Binding var selectedDate: Date
     let minDate: Date
     let maxDate: Date
-    
+
     var label: String
 
-
-
-    
-    
-    
     var body: some View {
         VStack(alignment: .leading) {
             Text(label)
-            DatePicker ("Date", selection: $selectedDate, in: minDate...maxDate ,displayedComponents: .date)
+            DatePicker("Date", selection: $selectedDate, in: minDate...maxDate, displayedComponents: .date)
                 .labelsHidden()
                 .frame(width: 270, height: 80, alignment: .center)
                 .clipped()
@@ -134,25 +125,16 @@ func intToStringAmount(_ amount: Int) -> String {
     var StringAmount = String(amount)
     if StringAmount.count == 1 {
         StringAmount = "0.0" + StringAmount
-    }
-    else if StringAmount.count == 2 {
+    } else if StringAmount.count == 2 {
         StringAmount = "0." + StringAmount
-    }
-    else {
+    } else {
     StringAmount.insert(".", at: StringAmount.index(StringAmount.endIndex, offsetBy: -2))
     }
     StringAmount.insert("$", at: StringAmount.startIndex)
     return StringAmount
 }
 
-
-
-
-
-
-
-
-struct RoundedButton : View {
+struct RoundedButton: View {
     var body: some View {
         Button(action: {}) {
             Text("ADD SITE")
@@ -164,15 +146,3 @@ struct RoundedButton : View {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

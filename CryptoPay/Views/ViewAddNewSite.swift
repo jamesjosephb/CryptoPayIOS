@@ -19,7 +19,7 @@ struct ViewAddNewSite: View {
     @State var siteTimeZonePlaceHolder = "Select the TimeZone"
     @State var siteMPMPlaceHolder = "Fill in the MPM Number"
     @State var sitePasswordPlaceHolder = "Fill in the Password"
-    
+
     @State var siteName = ""
     @State var siteCode = ""
     @State var siteType = ""
@@ -30,9 +30,9 @@ struct ViewAddNewSite: View {
     @State var siteTimeZone = ""
     @State var siteMPM = ""
     @State var sitePassword = ""
-    
+
     var body: some View {
-        ZStack{
+        ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
             ScrollView {
                 Text("To add a new site, please provide the following information:")
@@ -44,12 +44,25 @@ struct ViewAddNewSite: View {
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding(.bottom)
-                    SiteInfoForm(siteNamePlaceHolder: $siteNamePlaceHolder, siteCodePlaceHolder: $siteCodePlaceHolder, siteTypePlaceHolder: $siteTypePlaceHolder, siteName: $siteName, siteCode: $siteCode, siteType: $siteType)
+                    SiteInfoForm(siteNamePlaceHolder: $siteNamePlaceHolder,
+                                 siteCodePlaceHolder: $siteCodePlaceHolder,
+                                 siteTypePlaceHolder: $siteTypePlaceHolder,
+                                 siteName: $siteName, siteCode: $siteCode,
+                                 siteType: $siteType)
                     Text("SITE ADDRESS")
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding()
-                    SiteLocationForm(siteAddress: $siteAddress, siteCity: $siteCity, siteState: $siteState, siteZipCode: $siteZipCode, siteTimeZone: $siteTimeZone, siteAddressPlaceHolder: $siteAddressPlaceHolder, siteCityPlaceHolder: $siteCityPlaceHolder, siteStatePlaceHolder: $siteStatePlaceHolder, siteZipCodePlaceHolder: $siteZipCodePlaceHolder, siteTimeZonePlaceHolder: $siteTimeZonePlaceHolder)
+                    SiteLocationForm(siteAddress: $siteAddress,
+                                     siteCity: $siteCity,
+                                     siteState: $siteState,
+                                     siteZipCode: $siteZipCode,
+                                     siteTimeZone: $siteTimeZone,
+                                     siteAddressPlaceHolder: $siteAddressPlaceHolder,
+                                     siteCityPlaceHolder: $siteCityPlaceHolder,
+                                     siteStatePlaceHolder: $siteStatePlaceHolder,
+                                     siteZipCodePlaceHolder: $siteZipCodePlaceHolder,
+                                     siteTimeZonePlaceHolder: $siteTimeZonePlaceHolder)
                     Text("Merchant Information")
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
@@ -68,11 +81,11 @@ struct SiteInfoForm: View {
     @Binding var siteNamePlaceHolder: String
     @Binding var siteCodePlaceHolder: String
     @Binding var siteTypePlaceHolder: String
-    
+
     @Binding var siteName: String
     @Binding var siteCode: String
     @Binding var siteType: String
-    
+
     var body: some View {
         VStack {
             LabelTextField(label: "NAME", placeHolder: siteNamePlaceHolder, userInput: $siteName)
@@ -88,7 +101,7 @@ struct SiteLocationForm: View {
     @Binding var siteState: String
     @Binding var siteZipCode: String
     @Binding var siteTimeZone: String
-    
+
     @Binding var siteAddressPlaceHolder: String
     @Binding var siteCityPlaceHolder: String
     @Binding var siteStatePlaceHolder: String
@@ -108,7 +121,7 @@ struct SiteLocationForm: View {
 struct MerchantCredentialsForm: View {
     @Binding var siteMPM: String
     @Binding var sitePassword: String
-    
+
     @Binding var siteMPMPlaceHolder: String
     @Binding var sitePasswordPlaceHolder: String
     var body: some View {
@@ -118,9 +131,6 @@ struct MerchantCredentialsForm: View {
         }
     }
 }
-
-
-
 
 struct ViewAddNewSite_Previews: PreviewProvider {
     static var previews: some View {

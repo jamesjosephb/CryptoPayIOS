@@ -8,16 +8,13 @@
 
 import Foundation
 
-
 class NetworkRequests {
 
    let defaultSession = URLSession(configuration: .default)
    var errorMessage: String?
    var results: Data?
    typealias Results = (Data, String) -> Void
-   
 
- 
     func getSearchResults(_ searchTerm: String, completion: @escaping Results) {
         let SearchRequest = "https://cryptopay.jamesjosephburch.com" + searchTerm
         if let urlComponents = URLComponents(string: SearchRequest) {
@@ -45,6 +42,3 @@ class NetworkRequests {
      }
    }
 }
-
-
-

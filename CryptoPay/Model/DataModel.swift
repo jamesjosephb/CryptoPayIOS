@@ -10,10 +10,9 @@ import Foundation
 //https://www.hackingwithswift.com/quick-start/ios-swiftui/working-with-identifiable-items-in-swiftui
 
 func load<T: Decodable>(_ data: Data, as type: T.Type = T.self) -> T {
-    
 
     do {
-        
+
         let decoder = JSONDecoder()
         let dataString = String(data: data, encoding: String.Encoding.utf8) ?? "Data could not be printed"
         print(dataString)
@@ -23,7 +22,6 @@ func load<T: Decodable>(_ data: Data, as type: T.Type = T.self) -> T {
     }
 }
 
-
 struct PurchaseSummaryValues {
     var TotalLastMonth = 0
     var TotalMonthToDate = 0
@@ -31,13 +29,12 @@ struct PurchaseSummaryValues {
     var TotalToday = 0
 }
 
-
 struct PurchaseList: Decodable {
     var purchases: [Purchase]
 
 }
 
-struct Purchase: Codable, Identifiable, Equatable{
+struct Purchase: Codable, Identifiable, Equatable {
     let id = UUID()
     var cpid: Int
     var name: String
@@ -88,7 +85,6 @@ struct LoginResponce: Codable {
     var OwnerID: Int
     var SiteArray: [Sites]
 }
-
 
 struct Swiper: Codable, Identifiable, Equatable {
     let id = UUID()

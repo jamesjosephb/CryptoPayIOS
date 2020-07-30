@@ -10,15 +10,13 @@ import Foundation
 import Combine
 import SwiftUI
 
-
-
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-use-objectbinding-to-create-object-bindings
 //https://www.blckbirds.com/post/how-to-navigate-between-views-in-swiftui-by-using-an-bindableobject
 
 class ViewRouter: ObservableObject {
-    
-    let objectWillChange = PassthroughSubject<ViewRouter,Never>()
-    
+
+    let objectWillChange = PassthroughSubject<ViewRouter, Never>()
+
     var currentPage: String = "page1" {
         didSet {
             objectWillChange.send(self)

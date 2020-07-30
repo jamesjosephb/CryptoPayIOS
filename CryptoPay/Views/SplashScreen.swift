@@ -15,14 +15,11 @@ struct LoadLogin: View {
     var body: some View {
         if userData.sites.isEmpty {
             LoadingScreen()
-        }
-        else {
+        } else {
             HomeView()
         }
     }
 }
-
-
 
 struct LoadPurchases: View {
 
@@ -30,15 +27,13 @@ struct LoadPurchases: View {
     @ViewBuilder
     var body: some View {
         //if userData.purchases.isEmpty {
-        if userData.sitePurchaseSummary[userData.SelectedSiteID] == nil && userData.sitePurchaseDict[userData.SelectedSiteID] == nil  {
+        if userData.sitePurchaseSummary[userData.SelectedSiteID] == nil && userData.sitePurchaseDict[userData.SelectedSiteID] == nil {
             LoadingScreen()
-        }
-        else {
+        } else {
             ViewRecentPurchases()
         }
     }
 }
-
 
 struct LoadSwiperConfigurations: View {
 
@@ -47,22 +42,11 @@ struct LoadSwiperConfigurations: View {
     var body: some View {
         if userData.SelectedSwipers.isEmpty {
             LoadingScreen()
-        }
-        
-
-        else {
+        } else {
             ViewConfigureDevices()
         }
     }
 }
-
-
-
-
-
-
-
-
 
 struct LoadingScreen: View {
     var body: some View {
@@ -76,16 +60,6 @@ struct LoadingScreen: View {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 struct ActivityIndicator: View {
   @State private var isAnimating: Bool = false
@@ -111,5 +85,3 @@ struct ActivityIndicator: View {
     }
   }
 }
-
-

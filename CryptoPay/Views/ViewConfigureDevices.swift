@@ -12,7 +12,7 @@ struct ViewConfigureDevices: View {
     @EnvironmentObject var userData: UserData
         @State private var selectedSwiperIndex = -0
         @State private var showConfiguration = false
-        
+
         var body: some View {
             ZStack {
                     LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -21,7 +21,7 @@ struct ViewConfigureDevices: View {
                         Text("Select a card reader from below to configure.")
                         .font(.caption)
                         .padding()
-                        
+
                         ScrollView {
                         ForEach(userData.SelectedSwipers) {swiper in
                             Button(action: {
@@ -29,7 +29,7 @@ struct ViewConfigureDevices: View {
                                 self.showConfiguration.toggle()
                             }) {
                                 VStack {
-                                    HStack{
+                                    HStack {
                                         VStack(alignment: .leading) {
                                             Text(swiper.name)
                                             Text(swiper.macaddr).font(.caption)
@@ -55,19 +55,17 @@ struct ViewConfigureDevices: View {
         }
     }
 
-
     struct ViewConfigureDevices_Previews: PreviewProvider {
         static var previews: some View {
             ViewConfigureDevices()
         }
     }
 
-
     struct ViewConfigureSwiper: View {
         @EnvironmentObject var userData: UserData
         @Binding var selectedSwiperIndex: Int
         @Binding var showConfiguration: Bool
-        
+
         @State private var swiperName = "NoName"
         @State private var swiperProfile = "NoProfile"
         @State private var swiperProfileOptions = ["Count Down Coin", "Count Down Card", "Count Up", "Vend", "Auto"]
@@ -79,10 +77,10 @@ struct ViewConfigureDevices: View {
         @State private var swiperMax = 999
         @State private var swiperAmex = "NoAmex"
         @State private var swiperBnsCoin = 999
-        
+
         @State private var ProfilePickerToggle = false
         @State private var TypePickerToggle = false
-        
+
         func setLocalConfigVariables() {
             swiperName = userData.SelectedSwipers[selectedSwiperIndex].name
             swiperProfile = userData.SelectedSwipers[selectedSwiperIndex].SwiperProfile
@@ -93,8 +91,7 @@ struct ViewConfigureDevices: View {
             swiperAmex = userData.SelectedSwipers[selectedSwiperIndex].Amex
             swiperBnsCoin = userData.SelectedSwipers[selectedSwiperIndex].BnsCoin
         }
-        
-        
+
         var body: some View {
             ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -111,8 +108,8 @@ struct ViewConfigureDevices: View {
                     LabelNumField(label: "COINS PER PRESS", placeHolder: $swiperBnsCoin, userInput: $swiperBnsCoin)
 
                     HStack {
-                        Button (action: {self.showConfiguration.toggle()}) {
-                            VStack{
+                        Button(action: {self.showConfiguration.toggle()}) {
+                            VStack {
                                 Text("Cancel")
                                 .font(.headline)
                                 .foregroundColor(.white)
@@ -122,9 +119,9 @@ struct ViewConfigureDevices: View {
                                 .padding(.trailing, 20)
                             }
                         }
-                        
-                        Button (action: {self.showConfiguration.toggle()}) {
-                            VStack{
+
+                        Button(action: {self.showConfiguration.toggle()}) {
+                            VStack {
                                 Text("Apply")
                                 .font(.headline)
                                 .foregroundColor(.white)
