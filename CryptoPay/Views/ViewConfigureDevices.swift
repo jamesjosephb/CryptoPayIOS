@@ -32,7 +32,6 @@ struct ViewConfigureDevices: View {
                                     HStack{
                                         VStack(alignment: .leading) {
                                             Text(swiper.name)
-                                            //Spacer()
                                             Text(swiper.macaddr).font(.caption)
                                         }
                                         Spacer()
@@ -53,7 +52,6 @@ struct ViewConfigureDevices: View {
                     ViewConfigureSwiper(selectedSwiperIndex: $selectedSwiperIndex, showConfiguration: $showConfiguration)
                 }
             }
-            //.onAppear(perform: userData.getSwiperConfig())
         }
     }
 

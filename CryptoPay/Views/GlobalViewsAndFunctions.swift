@@ -110,9 +110,7 @@ struct DateSelector: View {
     let maxDate: Date
     
     var label: String
-    //@State var EndDate = Date()
-    //@Binding var StartDate: Date
-    //@Binding var EndDate: Date
+
 
 
     
@@ -135,7 +133,6 @@ struct DateSelector: View {
 func intToStringAmount(_ amount: Int) -> String {
     var StringAmount = String(amount)
     if StringAmount.count == 1 {
-        //StringAmount.insert(".", at: StringAmount.index(StringAmount.endIndex, offsetBy: -2))
         StringAmount = "0.0" + StringAmount
     }
     else if StringAmount.count == 2 {
@@ -162,7 +159,6 @@ struct RoundedButton : View {
                 .font(.headline)
                 .foregroundColor(.white)
                 .padding()
-                //.frame(width: 220, height: 60)
                 .background(Color.green)
                 .cornerRadius(15.0)
         }

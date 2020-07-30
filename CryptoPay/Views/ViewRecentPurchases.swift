@@ -35,13 +35,12 @@ struct RecentPurchases: View {
     @EnvironmentObject var userData: UserData
     @State private var showFilters = false
     @Binding var ShowPurchaseSummary: Bool
-    //@State var selectedStartDate = Date()
-    //@State var selectedEndDate = Date()
+
     
     
     func CollapseShowPurchaseSummary() {
         ShowPurchaseSummary = false
-        //ShowPurchaseSummary.toggle()
+
     }
     
     var body: some View {
@@ -62,8 +61,7 @@ struct RecentPurchases: View {
                     VStack{
                         Text("Filter")
                         .padding(.trailing)
-                        //.background(Color("lightGreyColor"))
-                        //.cornerRadius(5.0)
+
                     }
                 }
             }
@@ -101,20 +99,20 @@ struct RecentPurchases: View {
             let purchases = userData.sitePurchaseDict[userData.SelectedSiteID]
             
             
-            //minDate = userData.getDateTime(userData.purchases[userData.purchases.count - 1].time)
+
             let lastPurchase = (purchases![purchases!.count - 1]).time
             minDate = userData.getDateTime(lastPurchase)
            
 
-            //maxDate = userData.getDateTime(userData.purchases[0].time)
+
             let firstPurchase = (purchases![0]).time
             maxDate = userData.getDateTime(firstPurchase)
             
             
-            //selectedStartDate = userData.getDateTime(userData.purchases[userData.purchases.count - 1].time)
+
             selectedStartDate = minDate
         
-            //selectedEndDate = userData.getDateTime(userData.purchases[0].time)
+
             selectedEndDate = maxDate
         }
         
@@ -122,9 +120,6 @@ struct RecentPurchases: View {
             userData.FilteredPurchasesArray.removeAll()
             let purchases = userData.sitePurchaseDict[userData.SelectedSiteID]!
             userData.FilteredPurchasesArray.removeAll()
-            //userData.FilteredPurchasesArray = purchases!
-            //userData.FilteredPurchasesArray = userData.filterTransactionsByDate(StartDate: selectedStartDate, EndDate: selectedEndDate)
-            //print(purchases!)
             if searchName != "" {
                 for purchase in purchases {
                     print(purchase)
@@ -177,7 +172,6 @@ struct RecentPurchases: View {
                     }.padding()
                 }
             }.onAppear(perform: self.setStartingDateRange)
-            //.onAppear(perform: getFilteredPurchasesArray)
         }
     }
     
@@ -185,13 +179,10 @@ struct RecentPurchases: View {
         @EnvironmentObject var userData: UserData
         @State var PurchaseDetail = [Purchase]()
         @State var TransID = ""
-        
-        //@Binding var selectedStartDate: Date
-        //@Binding var selectedEndDate: Date
-        //@State var FilteredPurchasesArray = [Purchase]()
+
         
         init(){
-            //UITableView.appearance().backgroundColor = .clear
+
             UITableView.appearance().backgroundColor = .clear
             UITableViewCell.appearance().backgroundColor = .clear
             UITableView.appearance().tableFooterView = UIView()
@@ -200,7 +191,6 @@ struct RecentPurchases: View {
         
         
         func addToPurchaseDetail(purchaseToAdd: Purchase) {
-            //print("Added")
             PurchaseDetail.removeAll()
             PurchaseDetail.append(purchaseToAdd)
         }
@@ -218,7 +208,6 @@ struct RecentPurchases: View {
         var body: some View {
             VStack {
                 List (userData.FilteredPurchasesArray, id: \.id) { purchase in
-                //List(userData.sitePurchaseDict[userData.SelectedSiteID]!, id: \.id) { purchase in
                             VStack(alignment: .leading) {
                                 Button(action: {self.addToPurchaseDetail(purchaseToAdd: purchase)}) {
                                     VStack {
@@ -233,11 +222,9 @@ struct RecentPurchases: View {
                                     Text(self.userData.getTime(purchase.time))
                                     Text(self.userData.getDate(purchase.time))
                                     Spacer()
-                                    //purchase.transid
                                 }
                                 }
                                 if self.PurchaseDetail.contains(purchase) {
-                                    //TransactionDetail(ShowTransactionDetail: self.$ShowTransactionDetail)
                                     VStack {
                                         //Text("Test")
                                         Divider()
@@ -257,7 +244,6 @@ struct RecentPurchases: View {
                                     }.onAppear(perform: self.getPurchaseDetails)
                                         .padding(.top, 4)
                                         .padding(.horizontal, 20)
-                                    //.background(Color("lightGreyColor"))
                                     }
                             }
                             .padding(.vertical, 2)
@@ -267,7 +253,7 @@ struct RecentPurchases: View {
                     }.id(UUID()) //https://www.hackingwithswift.com/articles/210/how-to-fix-slow-list-updates-in-swiftui
                 
                Spacer()
-            }//.onAppear(perform: self.getFilteredPurchasesArray)
+            }
         }
     }
 }
@@ -290,7 +276,6 @@ struct PurchaseSummary: View {
     
     var body: some View {
         VStack {
-            //Puchase Summary Section
         VStack {
             Button(action: {
                 self.ShowPurchaseSummary.toggle()
@@ -332,7 +317,6 @@ struct PurchaseSummary: View {
                     }.padding()
             }
         }
-        //.padding()
         .background(Color("lightGreyColor"))
         .cornerRadius(15.0)
         }
@@ -360,7 +344,6 @@ struct sitePurchases: View {
     @EnvironmentObject var userData: UserData
     
     init(){
-        //UITableView.appearance().backgroundColor = .clear
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
         UITableView.appearance().tableFooterView = UIView()
@@ -368,10 +351,10 @@ struct sitePurchases: View {
     }
     
     var body: some View {
-        //List(userData.purchases, id: \.id) { purchase in
+
         List(userData.sitePurchaseDict[userData.SelectedSiteID]!, id: \.id) { purchase in
                 VStack {
-                    //Button(action: {self.ShowTransactionDetail.toggle()}) {
+
                         HStack {
                             Text(purchase.name)
                             Spacer()
@@ -379,13 +362,10 @@ struct sitePurchases: View {
                             Text(String(purchase.totalcharge))
                             
                         }
-                    //}
+
                     Text(purchase.time)
-                    /*if self.ShowTransactionDetail {
-                        TransactionDetail(ShowTransactionDetail: self.$ShowTransactionDetail)
-                    }*/
-                }//.background(Color("LightMintLeaf"))
-                //.cornerRadius(5.0)
+
+                }
         }
     }
 }

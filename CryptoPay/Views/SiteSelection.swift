@@ -26,10 +26,6 @@ struct SiteSelection: View {
                 .padding(.horizontal, 5)
             .background(Color("LightElectronBlue"))
             .cornerRadius(5.0)
-                
-            //.overlay(
-            //RoundedRectangle(cornerRadius: 10)
-            //    .stroke(Color.white, lineWidth: 3))
             }.padding(.bottom, 4)
             if self.ShowSites {
                 VisualEffectView(effect: UIBlurEffect(style: .dark))
@@ -119,10 +115,3 @@ struct ShowSitesMenu: View{
     }
 }
 
-/*
-struct SiteSelection_Previews: PreviewProvider {
-    static var previews: some View {
-        SiteSelection(ShowSites: $ShowSites)
-    }
-}
-*/

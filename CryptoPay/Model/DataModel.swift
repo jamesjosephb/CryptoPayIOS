@@ -11,7 +11,7 @@ import Foundation
 
 func load<T: Decodable>(_ data: Data, as type: T.Type = T.self) -> T {
     
-    //let data = json.data(using: .utf8)!
+
     do {
         
         let decoder = JSONDecoder()
@@ -23,28 +23,6 @@ func load<T: Decodable>(_ data: Data, as type: T.Type = T.self) -> T {
     }
 }
 
-//
-//struct Sites: Codable {
-//    var MPMs: Array<String>
-//    var OwnerID: Int
-//}
-
-//struct SwipersList: Codable {
-//    var Swipers = [Swipers]()
-//}
-
-
-
-//struct SwiperConfig: Codable {
-//    var Amex: String
-//    var BnsCoin: Int
-//    var MaxCh: Int
-//    var MinCh: Int
-//    var PrchTyp: String
-//    var Rate: Int
-//    var SwiperName: String
-//    var SwiperProfile: String
-//}
 
 struct PurchaseSummaryValues {
     var TotalLastMonth = 0
@@ -56,7 +34,7 @@ struct PurchaseSummaryValues {
 
 struct PurchaseList: Decodable {
     var purchases: [Purchase]
-    //func getPurchases() -> [Purchase] {return self.purchases}
+
 }
 
 struct Purchase: Codable, Identifiable, Equatable{
@@ -110,25 +88,6 @@ struct LoginResponce: Codable {
     var OwnerID: Int
     var SiteArray: [Sites]
 }
-
-//struct Swipers: Codable, Identifiable {
-//    let id = UUID()
-//    //var swiper: Swiper?
-//    //var config: SwiperConfig?
-//
-//    var lastcontact: String
-//    var macaddr: String
-//    var name: String
-//
-//    var Amex: String
-//    var BnsCoin: Int
-//    var MaxCh: Int
-//    var MinCh: Int
-//    var PrchTyp: String
-//    var Rate: Int
-//    var SwiperName: String
-//    var SwiperProfile: String
-//}
 
 
 struct Swiper: Codable, Identifiable, Equatable {

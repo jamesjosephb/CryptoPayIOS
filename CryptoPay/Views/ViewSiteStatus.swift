@@ -15,10 +15,10 @@ struct ViewSiteStatus: View {
         ZStack {
             LinearGradient(gradient: Gradient(colors: [Color("DarkElectronBlue"), Color("MidGrey")]), startPoint: .topLeading, endPoint: .bottomTrailing)
             ScrollView {
-                // Site Info
+
                 VStack {
                     HStack{
-                        //Text(userData.Selectedsitename)
+
                         Text("Site Information")
                             .bold()
                         Spacer()
@@ -45,7 +45,7 @@ struct ViewSiteStatus: View {
                 //Status
                 VStack {
                     HStack{
-                        //Text(userData.Selectedsitename)
+
                         Text("Site Status")
                             .bold()
                         Spacer()
@@ -79,7 +79,7 @@ struct ViewSiteStatus: View {
                     Spacer()
                     
                     
-                    //Email
+
                     if userData.Selectedsitepurchemail == "Yes" {
                         HStack{
                             Text("Alarm Contacts:")
@@ -102,7 +102,7 @@ struct ViewSiteStatus: View {
                     }
                     Spacer()
                     
-                    //Coordinator Connected
+
                     if userData.Selectedsitedownstat == "Connected" {
                         HStack{
                             Text("Coordinator Status:")
@@ -124,7 +124,7 @@ struct ViewSiteStatus: View {
                     
                     
                     
-                    //Swiper Status
+
                     HStack{
                         Text("Credit Card Reader Status")
                             .bold()
@@ -142,7 +142,7 @@ struct ViewSiteStatus: View {
                                 HStack{
                                     VStack(alignment: .leading) {
                                     Text(swiper.name)
-                                    //Spacer()
+
                                     Text(swiper.macaddr)
                                         .font(.caption)
                                     }
@@ -161,7 +161,7 @@ struct ViewSiteStatus: View {
                                 HStack{
                                     VStack(alignment: .leading) {
                                         Text(swiper.name)
-                                        //Spacer()
+
                                         Text(swiper.macaddr)
                                         .font(.caption)
                                     }
@@ -177,12 +177,12 @@ struct ViewSiteStatus: View {
                         Spacer()
                     }
 
-                }//VStack
+                }
                 .padding()
                 .background(Color("lightGreyColor"))
                 .cornerRadius(5.0)
                 .padding(.bottom, 20)
-            }//Zstack
+            }
                 .padding(.horizontal)
         }
     }

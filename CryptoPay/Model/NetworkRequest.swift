@@ -14,7 +14,6 @@ class NetworkRequests {
    let defaultSession = URLSession(configuration: .default)
    var errorMessage: String?
    var results: Data?
-   //var sites: Sites = Sites(MPMs: [],OwnerID: 0)
    typealias Results = (Data, String) -> Void
    
 

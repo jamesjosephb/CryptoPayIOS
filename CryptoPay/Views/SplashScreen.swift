@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoadLogin: View {
-    //@EnvironmentObject var viewRouter: ViewRouter
+
     @EnvironmentObject var userData: UserData
     @ViewBuilder
     var body: some View {
@@ -25,7 +25,7 @@ struct LoadLogin: View {
 
 
 struct LoadPurchases: View {
-    //@EnvironmentObject var viewRouter: ViewRouter
+
     @EnvironmentObject var userData: UserData
     @ViewBuilder
     var body: some View {
@@ -41,7 +41,7 @@ struct LoadPurchases: View {
 
 
 struct LoadSwiperConfigurations: View {
-    //@EnvironmentObject var viewRouter: ViewRouter
+
     @EnvironmentObject var userData: UserData
     @ViewBuilder
     var body: some View {
@@ -49,9 +49,7 @@ struct LoadSwiperConfigurations: View {
             LoadingScreen()
         }
         
-//        else if userData.swipers[0].SwiperProfile == "NoProfile" {
-//            LoadingScreen()
-//        }
+
         else {
             ViewConfigureDevices()
         }
@@ -114,10 +112,4 @@ struct ActivityIndicator: View {
   }
 }
 
-/*
-struct SplashScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        SplashScreen()
-    }
-}
-*/
+

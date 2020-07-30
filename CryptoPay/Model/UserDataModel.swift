@@ -23,7 +23,6 @@ public protocol CustomStringConvertible {
 
 class UserData: ObservableObject {
     
-    //let didChange = PassthroughSubject<UserData,Never>()
     
     @Published var errorMessage = ""
     @Published var SelectedSiteID = ""

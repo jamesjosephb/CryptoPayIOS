@@ -37,17 +37,3 @@ struct MotherView_Previews: PreviewProvider {
 
 
 
-//struct FatherView: View {
-//    @EnvironmentObject var viewRouter: ViewRouter
-//
-//
-//    var body: some View {
-//        VStack {
-//            if viewRouter.TabViewSelection == "ViewSiteStatus" {
-//                LoginPage()
-//            } else if viewRouter.TabViewSelection == "RecentPurchases" {
-//                HomeView()
-//            }
-//        }
-//    }
-//}

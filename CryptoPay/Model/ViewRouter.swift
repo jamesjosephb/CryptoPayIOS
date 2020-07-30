@@ -24,16 +24,4 @@ class ViewRouter: ObservableObject {
             objectWillChange.send(self)
         }
     }
-    
-    
-
-    
-//    //ViewSiteStatus, RecentPurchases
-//    var TabViewSelection: String = "ViewSiteStatus" {
-//        didSet {
-//            objectWillChange.send(self)
-//        }
-//    }
-//}
-
 }
