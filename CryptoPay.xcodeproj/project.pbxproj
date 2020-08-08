@@ -27,6 +27,7 @@
 		B96A4E6424AD725100F3FAEE /* ViewRecentPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96A4E6324AD725100F3FAEE /* ViewRecentPurchases.swift */; };
 		B994756E2493189D00A2B590 /* SiteSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994756D2493189D00A2B590 /* SiteSelection.swift */; };
 		B994757024932C7B00A2B590 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994756F24932C7B00A2B590 /* SplashScreen.swift */; };
+		B9EB0A9624DF690800BA78A5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EB0A9524DF690800BA78A5 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		B96A4E6324AD725100F3FAEE /* ViewRecentPurchases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecentPurchases.swift; sourceTree = "<group>"; };
 		B994756D2493189D00A2B590 /* SiteSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteSelection.swift; sourceTree = "<group>"; };
 		B994756F24932C7B00A2B590 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		B9EB0A9524DF690800BA78A5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				B9463A0E248C9DE60077F1D4 /* ViewRouter.swift */,
 				B9463A0A248C9D240077F1D4 /* DataModel.swift */,
 				B9463A10248C9E180077F1D4 /* MotherView.swift */,
+				B9EB0A9524DF690800BA78A5 /* Config.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				B9463A11248C9E180077F1D4 /* MotherView.swift in Sources */,
 				B96A4E6024AD20D800F3FAEE /* GlobalViewsAndFunctions.swift in Sources */,
 				B94639F3248C84DA0077F1D4 /* SceneDelegate.swift in Sources */,
+				B9EB0A9624DF690800BA78A5 /* Config.swift in Sources */,
 				B994757024932C7B00A2B590 /* SplashScreen.swift in Sources */,
 				B96A4E6224AD64D300F3FAEE /* ViewAddNewSite.swift in Sources */,
 				B9463A09248C9B4D0077F1D4 /* NetworkRequest.swift in Sources */,

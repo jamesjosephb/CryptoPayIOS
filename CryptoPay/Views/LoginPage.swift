@@ -14,8 +14,8 @@ struct LoginPage: View {
     @EnvironmentObject var userData: UserData
     @State private var showingInvalidLogin = false
     @State private var InvalidLoginMessage = ""
-    @State private var UserName: String = "dswashes"
-    @State private var PassWord: String = "dswashes"
+    @State private var UserName: String = "Pro Carwash"
+    @State private var PassWord: String = "Pro Carwash"
     @State private var saveLoginInfo = true
 
     func Login() {

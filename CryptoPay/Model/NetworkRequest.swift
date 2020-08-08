@@ -9,22 +9,20 @@
 import Foundation
 
 class NetworkRequests {
-
-   let defaultSession = URLSession(configuration: .default)
+   //let defaultSession = URLSession(configuration: .default)
    var errorMessage: String?
    var results: Data?
    typealias Results = (Data, String) -> Void
-
     func getSearchResults(_ searchTerm: String, completion: @escaping Results) {
         let SearchRequest = "https://cryptopay.jamesjosephburch.com" + searchTerm
-        if let urlComponents = URLComponents(string: SearchRequest) {
-        guard let url = urlComponents.url else {
-           errorMessage = "Invalid URL"
-         return
-        }
+        let url = URL(string: SearchRequest)
+        guard let requestUrl = url else { fatalError() }
+        var request = URLRequest(url: requestUrl)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue(APIkey, forHTTPHeaderField: "X-Api-Key")
         let Task: URLSessionDataTask =
-         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-         // 5
+         URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
          if let error = error {
            self?.errorMessage! += "DataTask error: " +
                                    error.localizedDescription + "\n"
@@ -39,6 +37,5 @@ class NetworkRequests {
          }
         }
         Task.resume()
-     }
    }
 }
